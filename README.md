@@ -38,41 +38,33 @@ using:
 Outputs denoised WAV files for downstream analysis.
 
 **dunn's_test.py**  
-Runs Dunn’s post-hoc statistical test to evaluate feature-level differences 
-across cow vocalization classes. Produces tables and figures for the manuscript.
+Runs Dunn’s post-hoc statistical test to evaluate feature-level differences across cow vocalization classes. Produces tables and figures for the manuscript.
 
 **llm_variance_components.py**  
 Fits Linear Mixed Models (LMM) to estimate variance components contributed by:  
 Farm, Barn Zone, Microphone, Mic Placement Context, Call Category, etc.  
-Used for reviewer-requested variability analysis.
 
 **pca_analysis.py**  
-Performs Principal Component Analysis (PCA) on the 24 acoustic features, 
-generates scree plots, loadings, and class separation visualizations.
+Performs Principal Component Analysis (PCA) on the 24 acoustic features, generates scree plots, loadings, and class separation visualizations.
 
 ---
 
 ### Documentation Files (`docs/`)
 
 **acoustic_features_24.md**  
-Detailed definitions, units, extraction settings, and formulas for all  
-24 acoustic features used in the study.
+Detailed definitions, units, extraction settings for all 24 acoustic features used in the study.
 
 **cow_call_categories.md**  
-Taxonomy of cow vocalization categories and subcategories, including behavioral 
-and emotional interpretations.
+Taxonomy of cow vocalization categories and subcategories, including behavioral and emotional interpretations.
 
 **data_augmentation_and_balancing.md**  
-Complete description of augmentation methods and balancing logic used to 
-address dataset imbalance.
+Complete description of augmentation methods and balancing logic used to address dataset imbalance.
 
 **denoising_pipeline_rx11.md**  
-Exact steps performed in iZotope RX11 during original denoising, with 
-corresponding Python replacements for full reproducibility.
+Exact steps performed in iZotope RX11 during original denoising, with corresponding Python replacements for full reproducibility.
 
 **segmentation_annotation_process.md**  
-Workflow describing call segmentation, manual annotation, quality control, 
-and metadata structure.
+Workflow describing call segmentation, manual annotation, quality control, and metadata structure.
 
 ---
 
@@ -87,9 +79,6 @@ This pipeline replicates the acoustic cleaning steps described in the manuscript
 5. Export processed WAV  
 6. (Optional) Perform augmentation & class balancing  
 7. Extract 24 acoustic features  
-
-The Python implementation matches the published RX11 steps as closely 
-as possible using open-source signal-processing libraries.
 
 ---
 
@@ -117,33 +106,19 @@ The repository includes the scripts used to generate analysis figures:
 - Dunn’s post-hoc test  
 - Linear mixed-effects models for variance partitioning  
 
-These were used to address reviewer feedback and strengthen the manuscript.
-
 ---
 
 ## Data Availability
 
-Raw audio, processed audio, metadata tables, spectrograms, and extracted 
-features are hosted on **Zenodo** under **restricted access** to comply with 
-farm-level agreements.
-
+Raw audio, processed audio, metadata tables, spectrograms, and extracted features are hosted on **Zenodo** under **restricted access** to comply with farm-level agreements.
 The DOI is provided in the manuscript.
 
 ---
 
-## Installation
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Citation
 If you use this repository, please cite:
 
-Kate, M., & Neethirajan, S. (2025).
-Big Data Approaches to Bovine Bioacoustics: A FAIR-Compliant Dataset and
-Scalable ML Framework for Precision Livestock Welfare.
-Frontiers in Big Data.
+Kate, M., & Neethirajan, S. (2025). Big Data Approaches to Bovine Bioacoustics: A FAIR-Compliant Dataset and Scalable ML Framework for Precision Livestock Welfare. arXiv preprint arXiv:2510.14443.
 
 Dataset DOI (Zenodo): [10.5281/zenodo.17764250]
 
