@@ -6,6 +6,21 @@ feature extraction pipeline used in the manuscript:
 **"Big Data Approaches to Bovine Bioacoustics: A FAIR-Compliant Dataset and 
 Scalable ML Framework for Precision Livestock Welfare" (Frontiers in Big Data).**
 
+
+## Installation
+
+To set up the environment and install dependencies:
+
+```bash
+git clone https://github.com/<your-username>/<repo>.git
+cd <repo>
+
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+
+pip install -r requirements.txt
+
+
 ## Contents
 
 - `preprocess_pipeline.py`  
