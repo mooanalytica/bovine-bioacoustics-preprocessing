@@ -10,7 +10,6 @@ For each feature we list:
 
 - **Type & units**
 - **How it is computed (implementation note)**
-- **Meaning **
 
 ---
 
