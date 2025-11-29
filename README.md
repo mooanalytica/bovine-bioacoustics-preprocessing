@@ -1,14 +1,10 @@
 # Bovine Bioacoustics Preprocessing & Feature Engineering Pipeline
 
-This repository contains the complete open-source preprocessing, denoising, 
-segmentation, feature extraction, augmentation, balancing, and statistical 
-analysis pipeline used in the manuscript:
+This repository contains the complete open-source preprocessing, denoising, segmentation, feature extraction, augmentation, balancing, and statistical analysis pipeline used in the manuscript:
 
-**"Big Data Approaches to Bovine Bioacoustics: A FAIR-Compliant Dataset and 
-Scalable ML Framework for Precision Livestock Welfare" (Frontiers in Big Data).**
+**"Big Data Approaches to Bovine Bioacoustics: A FAIR-Compliant Dataset and Scalable ML Framework for Precision Livestock Welfare" (Frontiers in Big Data).**
 
-It includes all steps required to reproduce the acoustic feature dataset, 
-statistical analysis, and intermediate processing described in the manuscript.
+It includes all steps required to reproduce the acoustic feature dataset, statistical analysis, and intermediate processing described in the manuscript.
 
 ---
 
@@ -17,16 +13,13 @@ statistical analysis, and intermediate processing described in the manuscript.
 ### Python Code Files
 
 **acoustic_feature_extraction.py**  
-Extracts the full 24-dimensional acoustic feature set (F0, F1–F3, intensity, HNR,
-spectral features, MFCCs, RMS energy, ZCR). Uses Parselmouth + Librosa.
+Extracts the full 24-dimensional acoustic feature set (F0, F1–F3, intensity, HNR, spectral features, MFCCs, RMS energy, ZCR). Uses Parselmouth + Librosa.
 
 **audio_band_pass_filter.py**  
-Implements Butterworth band-pass filtering (configurable frequency range).  
-Used for preprocessing and noise removal before feature extraction.
+Implements Butterworth band-pass filtering (configurable frequency range). Used for preprocessing and noise removal before feature extraction.
 
 **augmentation_and_class_balancing.py**  
-Performs data augmentation (time-stretching, pitch shifting, noise addition)  
-and creates class-balanced datasets based on target sample counts.
+Performs data augmentation (time-stretching, pitch shifting, noise addition) and creates class-balanced datasets based on target sample counts.
 
 **denoising_pipeline.py**  
 Implements the open-source version of the iZotope RX11-style denoising workflow  
@@ -35,14 +28,13 @@ using:
 - Band-pass filtering  
 - Amplitude normalization  
 - Optional harmonic filtering  
-Outputs denoised WAV files for downstream analysis.
+- Outputs denoised WAV files for downstream analysis.
 
 **dunn's_test.py**  
-Runs Dunn’s post-hoc statistical test to evaluate feature-level differences across cow vocalization classes. Produces tables and figures for the manuscript.
+Runs Dunn’s post-hoc statistical test to evaluate feature-level differences across cow vocalization classes.
 
 **llm_variance_components.py**  
-Fits Linear Mixed Models (LMM) to estimate variance components contributed by:  
-Farm, Barn Zone, Microphone, Mic Placement Context, Call Category, etc.  
+Fits Linear Mixed Models (LMM) to estimate variance components contributed by: Farm, Barn Zone, Microphone, Mic Placement Context, Call Category, etc.  
 
 **pca_analysis.py**  
 Performs Principal Component Analysis (PCA) on the 24 acoustic features, generates scree plots, loadings, and class separation visualizations.
