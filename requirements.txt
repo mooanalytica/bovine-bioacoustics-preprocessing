@@ -1,0 +1,16 @@
+numpy
+scipy
+pandas
+matplotlib
+seaborn
+
+librosa
+soundfile
+noisereduce
+praat-parselmouth
+
+scikit-learn
+statsmodels
+scikit-posthocs
+
+tqdm
